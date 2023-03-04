@@ -1,0 +1,20 @@
+ManagerSc:
+    id:screenmanager
+    HomePage:
+        id:home
+    PlayPage:
+        id:play
+<btn@Button>:
+    backgruond_normal: ''
+    background_colro: utils.get_color_from_hex('#FFB13B')
+    background_down: ''
+
+<HomePage>:
+    name:'home'
+    FloatLayout:
+        canvas.before:
+            Color:
+                rgba:utils.get_color_from_hex('#730000')
+            Rectangle:
+                size:self.size
+                pos:self.pos

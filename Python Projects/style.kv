@@ -1,0 +1,101 @@
+FloatLayout:
+	GridLayout:
+		pos_hint:{"center_x":.5,"center_y":.7}
+		size_hint:.5,.5
+		rows:3
+		cols:3
+
+		Button:
+			id:btn1
+			text:""
+			font_size:52
+			font_name:"fonts/LibraryRecordsRegular-qZW66"
+			on_release:app.pressed(btn1)
+			background_color:"#20B2AA"
+		Button:
+			id:btn2
+			text:""
+			font_size:52
+			font_name:"fonts/LibraryRecordsRegular-qZW66"
+			on_release:app.pressed(btn2)
+			background_color:"#20B2AA"
+		Button:
+			id:btn3
+			text:""
+			font_size:52
+			font_name:"fonts/LibraryRecordsRegular-qZW66"
+			on_release:app.pressed(btn3)
+			background_color:"#20B2AA"
+		Button:
+			id:btn4
+			text:""
+			font_size:52
+			font_name:"fonts/LibraryRecordsRegular-qZW66"
+			on_release:app.pressed(btn4)
+			background_color:"#20B2AA"
+		Button:
+			id:btn5
+			text:""
+			font_size:52
+			font_name:"fonts/LibraryRecordsRegular-qZW66"
+			on_release:app.pressed(btn5)
+			background_color:"#20B2AA"
+		Button:
+			id:btn6
+			text:""
+			font_size:52
+			font_name:"fonts/LibraryRecordsRegular-qZW66"
+			on_release:app.pressed(btn6)
+			background_color:"#20B2AA"
+		Button:
+			id:btn7
+			text:""
+			font_size:52
+			font_name:"fonts/LibraryRecordsRegular-qZW66"
+			on_release:app.pressed(btn7)
+			background_color:"#20B2AA"
+		Button:
+			id:btn8
+			text:""
+			font_size:52
+			font_name:"fonts/LibraryRecordsRegular-qZW66"
+			on_release:app.pressed(btn8)
+			background_color:"#20B2AA"
+		Button:
+			id:btn9
+			text:""
+			font_size:52
+			font_name:"fonts/LibraryRecordsRegular-qZW66"
+			on_release:app.pressed(btn9)
+			background_color:"#20B2AA"
+	Label:
+		id:score
+		text:"X Goes First!"
+		pos_hint:{"center_x":.5,"center_y":.35}
+		font_size:40
+		font_name:"fonts/LibraryRecordsRegular-qZW66"
+		color:"#FF0000"
+	Button:
+		id:restart
+		text:"Restart the Game"
+		pos_hint:{"center_x":.5,"center_y":.25}
+		size_hint:.2,.1
+		font_size:25
+		font_name:"fonts/LibraryRecordsRegular-qZW66.ttf"
+		background_color:"#0000CD"
+		color:"#DC143C"
+		on_release:app.restart()
+
+	Label:
+		id:game
+		text:"X:0   |   O:0"
+		pos_hint:{"center_x":.5,"center_y":.05}
+		font_size:40
+		font_name:"fonts/Lcd.ttf"
+		color:"blue"
+
+
+
+
+			
+

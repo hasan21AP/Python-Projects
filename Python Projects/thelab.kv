@@ -1,0 +1,150 @@
+CanvasEx1:
+
+#: set s dp(150)
+
+<CanvasEx1>:
+	canvas:
+		Rectangle:
+			pos:self.center_x-s/2,self.center_y-s/2
+			size:s,s
+		Ellipse:
+			size:s,100
+			pos:100,100
+		
+
+<Images@GridLayout>:
+	cols:3
+	Image:
+		source:"Photos/Law.png"
+		allow_stretch:True
+	Image:
+		source:"Photos/Luffy.jpg"
+	Image:
+		source:"Photos/Zoro.png"
+
+
+<Bwidget>:
+	cols:3
+	ToggleButton:
+		text:"Off"
+		on_state:root.togglebutton(self)
+		size_hint:None,1
+		width:"100dp"
+	Button:
+		text:"Click here"
+		on_press:root.button()
+		disabled:root.counting_status
+	Label:
+		text:root.my_string
+		font_name:"fonts/Lcd.ttf"
+		font_size:"40dp"
+		color:.5, 0, .8, 0.94
+	Switch:
+		id:my_switch
+		size_hint:None,1
+		width:"100dp"
+		active:True 
+	Slider:
+		id:my_slider
+		min:0
+		max:100
+		value:50
+		disabled:not my_switch.active
+		#on_value:root.on_slider_value(self)
+	BoxLayout:
+		orientation:"vertical"
+		ProgressBar:
+			max:100
+			value:my_slider.value
+		Label:
+			text:str(int(my_slider.value))
+			size_hint:0.5,0.5
+			color:.5, 0, .8, 0.94
+			font_name:"fonts/Lcd.ttf"
+			font_size:"30dp"
+	TextInput:
+		#id:my_text_input
+		size_hint:0.2,0.2
+		width:"100dp"
+		height:"30dp"
+		multiline:False
+		on_text_validate:root.text_input(self)
+	Label:
+		text:"Your name: " + root.text
+		size_hint:0.5,0.5
+		color:.5, 0, .8, 0.94
+		font_size:"30dp"
+
+
+<Page@PageLayout>:
+	MainWidget:
+	Box:
+	Anchorlayout:
+	Grid:
+	Stack:
+	Scroll:
+
+
+<Scroll@ScrollView>:
+	Stack:
+		size_hint:1,None
+		height:self.minimum_height
+
+<Stack>:
+
+<Grid@GridLayout>:
+	#rows:3
+	cols:3
+	size_hint:.5,0.5
+	pos:200,200
+
+	Button:
+		text:"X"
+	Button:
+		text:"A"
+	Button:
+		text:"Y"
+	Button:
+		text:"B"
+	Box:
+	Button:
+		text:"R2"
+
+<Anchorlayout>:
+	anchor_x:"center"
+	anchor_y:"top"
+	BoxLayout:
+		size_hint:0.2,0.2	
+		Button:
+			text:"Button1"
+		Button:
+			text:"Button2"
+
+<Box>:
+	Button:
+		text:"Hello"
+	Label:
+		text:"Welcome"	
+	BoxLayout:
+		orientation:"vertical"
+		spacing:10
+		Button:
+			text:"Game"
+		Button:
+			text:"Anime"
+		Button:
+			text:"Program"	
+
+<MainWidget>:
+	Button:
+		text:"Anime"
+		size_hint:0.2,0.2
+		pos:200,100
+	Button:
+		text:"Program"
+		size_hint:0.2,0.2
+		pos:300,100
+	Label:
+		text:"Hasan"
+		size_hint:0.2,0.2
+		pos:200,300
